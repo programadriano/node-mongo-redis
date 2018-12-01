@@ -1,5 +1,4 @@
 'use strict';
-var mongoose = require('mongoose')
 var Person = require('../config/db');
 
 
@@ -25,7 +24,7 @@ module.exports = new class PersonRepository {
             role: person.role,
         }
 
-        return Person.findByIdAndUpdate(id, updatedperson, { new: true });
+        return Person.findByIdAndUpdate(id, updatedperson);
     }
 
     delete(id) {
